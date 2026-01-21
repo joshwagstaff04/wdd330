@@ -1,5 +1,5 @@
 import{r}from"./utils-B_kqwxmC.js";import{P as i}from"./ProductData-ckpWzqDt.js";function c(t){return`<li class="product-card">
-    <a href="product_pages/?product=${t.Id}">
+    <a href="/product_pages/?product=${t.Id}">
       <img
         src="${t.Image}"
         alt="${t.Name}"
