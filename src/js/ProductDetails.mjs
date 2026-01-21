@@ -17,13 +17,7 @@ export default class ProductDetails {
   addProductToCart() {
     const existing = getLocalStorage('so-cart');
     const cart = Array.isArray(existing) ? existing : [];
-
-    console.log('Cart BEFORE:', cart);
-    console.log('Adding:', this.product.Name);
-
     cart.push(this.product);
-    console.log('Cart AFTER:', cart);
-    
     setLocalStorage('so-cart', cart);
   }
 
