@@ -1,4 +1,4 @@
-import{g as t}from"./utils-B_kqwxmC.js";function e(){const r=t("so-cart").map(c=>s(c));document.querySelector(".product-list").innerHTML=r.join("")}function s(a){return`<li class="cart-card divider">
+import{l as t,g as e}from"./utils-BtmlJ1Ha.js";t();function s(){const r=e("so-cart").map(c=>o(c));document.querySelector(".product-list").innerHTML=r.join("")}function o(a){return`<li class="cart-card divider">
   <a href="#" class="cart-card__image">
     <img
       src="/wdd330/${a.Image}"
@@ -11,4 +11,4 @@ import{g as t}from"./utils-B_kqwxmC.js";function e(){const r=t("so-cart").map(c=
   <p class="cart-card__color">${a.Colors[0].ColorName}</p>
   <p class="cart-card__quantity">qty: 1</p>
   <p class="cart-card__price">$${a.FinalPrice}</p>
-</li>`}e();
+</li>`}s();
