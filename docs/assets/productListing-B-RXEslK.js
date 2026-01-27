@@ -1,4 +1,4 @@
-import{r as c,l as i,a as o}from"./utils-BtmlJ1Ha.js";import{P as n}from"./ProductData-8k7b23-H.js";function d(t){return`<li class="product-card">
+import{r as c,l as i,a as o}from"./utils-Df4u4WjJ.js";import{P as n}from"./ProductData-8k7b23-H.js";function d(t){return`<li class="product-card">
     <a href="../product_pages/?product=${t.Id}">
       <img
         src="${t.Images.PrimaryMedium}"
