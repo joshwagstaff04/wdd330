@@ -99,6 +99,10 @@ p {
   color: var(--tertiary-color);
 }
 
+.hide {
+  display: none;
+}
+
 button {
   padding: 0.5em 2em;
   background-color: var(--secondary-color);
@@ -303,5 +307,11 @@ footer {
 .category-list p {
   margin: 0;
   padding: 0;
+  font-weight: bold;
+}
+.cart-footer {
+  text-align: right;
+  padding: 1rem;
+  font-size: 1.2em;
   font-weight: bold;
 }
