@@ -11,5 +11,9 @@ document.querySelector('#zip').addEventListener('blur', myCheckout.calculateOrde
 document.querySelector('.checkout-form').addEventListener('submit', (e) => {
   e.preventDefault();
   const form = e.target;
-  myCheckout.checkout(form);
+  if (form.checkValidity()) {
+    myCheckout.checkout(form);
+  } else {
+    form.reportValidity();
+  }
 });
