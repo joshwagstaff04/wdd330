@@ -26,6 +26,7 @@ function cartItemTemplate(item) {
   <p class="cart-card__color">${item.Colors[0].ColorName}</p>
   <p class="cart-card__quantity">qty: 1</p>
   <p class="cart-card__price">$${item.FinalPrice}</p>
+  <span class="cart-remove" data-id="${item.Id}">X</span>
 </li>`;
 
   return newItem;
@@ -36,5 +37,19 @@ function displayCartTotal(cartItems) {
   document.querySelector('.cart-total span').textContent = total.toFixed(2);
   document.querySelector('.cart-footer').classList.remove('hide');
 }
+
+function removeFromCart(id) {
+  const cartItems = getLocalStorage('so-cart');
+  const updatedCart = cartItems.filter((item) => item.Id !== id);
+  localStorage.setItem('so-cart', JSON.stringify(updatedCart));
+  renderCartContents();
+}
+
+document.querySelector('.product-list').addEventListener('click', function(e) {
+  if (e.target.classList.contains('cart-remove')) {
+    const itemId = e.target.getAttribute('data-id');
+    removeFromCart(itemId);
+  }
+});
 
 renderCartContents();
